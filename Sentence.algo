@@ -1,0 +1,27 @@
+ALGORITHM Analyze
+
+VAR
+    c : CHAR
+    nb_char : INTEGER := 0;
+    nb_word : INTEGER := 0;
+    nb_vow : INTEGER := 0;
+
+BEGIN
+
+    FOR i FROM 0 TO length(c) DO
+        nb_char = nb_char+1
+        IF Maj(c) in("A", "O", "I", "E", "Y", "U") THEN
+            nb_vow := nb_vow +1;
+        END_IF
+        
+        IF (c) THEN
+            nb_word := nb_word +1;
+        END_IF
+
+    END_FOR
+
+    Write("The length of the sentence is ",nb_char);
+    Write("The number of words in the sentence is ",nb_word+1);
+    Write("he number of vowels in the sentence. is ",nb_vow);
+
+END
